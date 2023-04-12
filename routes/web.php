@@ -29,15 +29,15 @@ Route::get('/admin/login', function(){
 
 Route::get('/admin/registration', [AdminController::class, 'create']);
     
-    Route::get('/student/create', [StudentController::class, 'create']);
-    Route::post('/student', [StudentController::class, 'store'])->name('student.store');
-    Route::get('/student/list',[StudentController::class,'index'])->name('student.index');
-    Route::get('/student/{student}', [StudentController::class, 'show'])->name('student.show');
-    Route::get('/student/{student}/edit', [StudentController::class, 'edit'])->name('student.edit');
+Route::get('/student/create', [StudentController::class, 'create']);
+Route::post('/student', [StudentController::class, 'store'])->name('student.store');
+Route::get('/student/list',[StudentController::class,'index'])->name('student.index');
+Route::get('/student/{student}', [StudentController::class, 'show'])->name('student.show');
+Route::get('/student/{student}/edit', [StudentController::class, 'edit'])->name('student.edit');
+Route::post('/admin', [AdminController::class, 'store'])->name('admin.store');
+Route::put('/student/{student}', [StudentController::class, 'update'])->name('student.update');
+Route::delete('/student/{student}', [StudentController::class, 'destroy'])->name('student.delete');
     
 
-Route::group(['middleware'=>['web']], function(){
-    Route::post('/admin', [AdminController::class, 'store'])->name('admin.store');
-    Route::put('/student/{student}', [StudentController::class, 'update'])->name('student.update');
-    Route::delete('/student/{student}', [StudentController::class, 'destroy'])->name('student.delete');
-});
+
+    

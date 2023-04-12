@@ -1,5 +1,5 @@
 <h>HOME PAGE</h>
 
-<p><a href="/admin/login">LOGIN</a></p>
-<p><a href="/admin/registration">REGISTER</a></p>
+<p><a href="">LOGIN</a></p>
+<p><a href="">REGISTER</a></p>
 
